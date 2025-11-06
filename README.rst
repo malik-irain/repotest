@@ -1,5 +1,5 @@
 .. ############################################################
-.. WARNING: This file is auto-generated from README.rst.tpl.
-.. Do not edit directly.
+..  WARNING: This file is AUTO-GENERATED from README.rst.tpl.
+..                  ⚠️ DO NOT EDIT MANUALLY ⚠️
 .. ############################################################
-main 
+this is main
