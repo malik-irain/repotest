@@ -1,1 +1,1 @@
-.. include:: packages/pymodaq/README.rst
+{{BRANCH_NAME}}
