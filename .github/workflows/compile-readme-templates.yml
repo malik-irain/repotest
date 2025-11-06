@@ -58,6 +58,6 @@ jobs:
           git config --local user.name "GitHub Action"
           find . -type f -name "README.rst" -exec git add {} \;
           git status
-          git diff --quiet || git commit -m "Automatic README(s) update for branch ${{ steps.extract_branch.outputs.BRANCH_NAME }}"
+          git diff --cached --quiet || git commit -m "Automatic README(s) update for branch ${{ steps.extract_branch.outputs.BRANCH_NAME }}"
           git status
           git push
