@@ -1,0 +1,1 @@
+.. include:: packages/pymodaq/README.rst
