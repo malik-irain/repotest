@@ -50,13 +50,13 @@ jobs:
               sed "s/{{BRANCH_NAME}}/${{ steps.extract_branch.outputs.BRANCH_NAME }}/g" "${template}"
             } > "${readme}"
           done
-          find . -type f -name "README.rst"
+          
 
       - name: Commit and push README changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.rst **/README.rst
+          find . -type f -name "README.rst" -exec git add {} \;
           git status
           git diff --quiet || git commit -m "Automatic README(s) update for branch ${{ steps.extract_branch.outputs.BRANCH_NAME }}"
           git push
