@@ -36,9 +36,10 @@ jobs:
         run: |
           WARNING=$(cat <<'EOF'
           .. ############################################################
-          .. WARNING: This file is auto-generated from README.rst.tpl.
-          .. Do not edit directly.
+          ..  WARNING: This file is AUTO-GENERATED from README.rst.tpl.
+          ..                  ⚠️ DO NOT EDIT MANUALLY ⚠️
           .. ############################################################
+
 
           EOF
           )
@@ -57,7 +58,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           find . -type f -name "README.rst" -exec git add {} \;
-          git status
           git diff --cached --quiet || git commit -m "Automatic README(s) update for branch ${{ steps.extract_branch.outputs.BRANCH_NAME }}"
-          git status
           git push
